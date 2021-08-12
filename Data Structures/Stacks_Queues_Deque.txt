@@ -1,0 +1,23 @@
+What is the difference between Stacks, Queue and Deque?
+
+STACKS:-
+
+Stacks work on principle of LIFO
+Last in First Out
+Much like stack of plates.
+One that is added is first one to be removed.
+Features to implement:-
+
+1. push - append element at front ( constant time)
+2. pop - remove element from front ( constant time)
+
+QUEUE:-
+
+Queue works on principle of FIFO
+First in First OUt
+Much like people in line for collecting movie tickets
+First one to get is the first one out.
+
+Features to implement:-
+1. add - adds element at last ( linear time if no info about tail, else constant time)
+2. remove - removes element from front (constant time)
