@@ -1,10 +1,22 @@
+'''
+This algorithm uses  dictionary( even though list can also be used
+however accessing element in dictionary takes constant time while it
+takes linear time in list)
+and smart manipulation of previous_node pointer and current_node pointer
+to remove duplicate elements.
+Time complexity:- O(n)
+( Best algorithm in terms of time complexity)
+
+Works for both sorted and unsorted linked list
+'''
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
 
 
-class Solution:
+class LinkedList:
     def insert(self, head, data):
         p = Node(data)
         if head == None:
@@ -41,7 +53,7 @@ class Solution:
         return head
 
 
-mylist = Solution()
+mylist = LinkedList()
 T = int(input())
 head = None
 for i in range(T):
