@@ -1,0 +1,9 @@
+Dynamic Programming:
+
+1. Memoize (remember) and re-use solutions to sub-problems that help solve the actual problem.
+
+In general, sub-problems might not be clearly observable.
+That's the hardest of Dynamic Programming.
+
+Time Complexity of Dynamic Programming = (Number of Sub-problems)*(time taken per sub-problem)
+

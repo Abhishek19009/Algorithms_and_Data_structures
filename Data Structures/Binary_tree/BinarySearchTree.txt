@@ -1,0 +1,12 @@
+Binary Search tree is extremely useful for different things.
+Essentially it is a data structure which facilitates faster execution of subroutine tasks which otherwise
+would have large time complexity.
+
+Ex- Searching in BST takes log(n) time contrary to simple array which takes n time
+BST being a tree supports different types of traversals.
+Inorder traversal is basically sorted version of the elements under consideration.
+
+Preorder and Postorder traversals can be used to determine structure of BST.
+
+Overall it is very widely used Data Structure which supports many tasks like searching, insertion, deletion, traversals
+etc. in much less time complexity than their array counterparts.

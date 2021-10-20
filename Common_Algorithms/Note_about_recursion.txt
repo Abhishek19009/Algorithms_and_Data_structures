@@ -1,0 +1,46 @@
+Recursion is easy...
+Don't get caught up in a loop
+Basic principle is very easy
+
+One common mistake that we do...
+
+def recurse(a,b):
+    # Run some algo
+    if a < 100 and b < 100:
+        a = a+b
+        b = a-b
+        recurse(a,b)
+    if a==b:
+        return "Found the match!!"
+
+
+There is something wrong in above function...
+Suppose you call recurse function in main function
+like this
+if __name__ == "__main__":
+    result = recurse(3,5)
+
+Problem is even though recurse function might be able to return "Found the match!!" after
+some recursion call, but that return value is not carried to the parent recursion call.
+
+so value of result variable will be None
+
+A simple fix is this:-
+
+def recurse(a,b):
+    # Run some algo
+    if a < 100 and b < 100:
+        a = a+b
+        b = a-b
+        return recurse(a,b)
+    if a==b:
+        return "Found the match!!"
+
+Now, at the recursion call when a==b, the return value will be carried to parent call and then to
+its parent call and so on
+Finally we will have a return value of "Found the match!!" for the first call.
+
+Hence, recursion is easy. All you have to do is to return values properly.
+Best way to do this is to return function itself in each call.
+Like - return recurse(a,b)
+which we did in above example.

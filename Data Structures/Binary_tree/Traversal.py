@@ -218,6 +218,7 @@ tree.root.right.right = Node(8)
 # print(tree.height(tree.root))
 # print(tree.size(tree.root))
 
+tree.print_tree("inorder")
 print(tree.is_bst_property_check())
 
 random_tree = BinarySearchTree(3)
@@ -227,3 +228,4 @@ random_tree.root.left.left = Node(7)
 random_tree.root.left.right = Node(10)
 
 print(random_tree.is_bst_property_check())
+random_tree.print_tree("inorder")

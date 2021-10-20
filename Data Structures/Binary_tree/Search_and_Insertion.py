@@ -58,6 +58,14 @@ class BST:
         elif data == cur_node.data:
             return True
 
+    def inorder_print(self, start, traversal):
+        # Left -> Root -> Right
+        if start:
+            traversal = self.inorder_print(start.left, traversal)
+            traversal += (str(start.data) + "-")
+            traversal = self.inorder_print(start.right, traversal)
+        return traversal
+
 
 bst = BST()
 
@@ -71,3 +79,5 @@ print(bst.find(4))
 print(bst.find(8))
 print(bst.find(10))
 print(bst.find(12))
+
+print(bst.inorder_print(bst.root, ""))

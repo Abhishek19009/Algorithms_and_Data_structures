@@ -1,0 +1,20 @@
+Refer to Universal Hashing by Yang Song
+We begin by choosing a prime number p large enough so that every possible key k is in the
+range 0 to p-1
+
+Zp denote the set {0, 1,2 ... p-1} and Zp* let denote the set {1,2,... p-1}
+
+We now define the hash function h(subscript)a,b for any a belongs to Zp* and any b belongs to Zp
+
+h(subscript)a,b(k) = ((ak+b)mod p) mod m
+
+k is the original key to be hashed.
+
+Basically choose a prime number big enough s.t a,k,b are all less than p and then mod it by p.
+Since p is prime and has large number of remainders.
+(ak+b)mod p is a good hash function
+Now finally mod it with m because our final hash should range between 0 to m-1
+The resulting number will be fairly random and will give better hash function.
+
+The fact that ((ak+b)mod p)mod m
+returns hash value with probability of at most 1/m can be proved.

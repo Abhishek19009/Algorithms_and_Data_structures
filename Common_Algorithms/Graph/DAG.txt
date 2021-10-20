@@ -1,0 +1,7 @@
+Directed Acyclic Graph (DAG) is a graph with directed edges and no cycles.
+By this definition all trees are DAGs since they don't contain cycles.
+
+One of the greatest property in DAG is finding shortest path which have time complexity of O(V+E).
+Also, finding longest path in DAG is not NP-hard and can be done in complexity of O(V+E).
+
+

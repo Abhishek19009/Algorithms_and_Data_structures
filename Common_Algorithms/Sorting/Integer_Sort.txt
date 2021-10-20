@@ -1,0 +1,25 @@
+ALso known as linear time sorting.
+We will utilise the power of the fact that accessing elements at particular index in RAM model
+takes constant time.
+
+1. Assume n keys having integer values.( This is a big assumption.)
+For simplicity let's consider the values to be non-negative.
+Integers belong to set {0, 1, 2, 3, 4,.... k-1}
+(and each fits in a word)
+
+2. For k not so big one can sort in linear time.
+It is conjecture that for all values of k, sorting can be done in linear time.
+Till today the best algorithm has complexity O(n*sqrt(log(logn)))
+
+Counting sort is an algorithm that can be used to demonstrate integer sorting with complexity linear time.
+
+Essential idea of counting sort is simple. We just count the occurences of a particular key( having integer values )
+in array and then arrange them accordingly to get the sorted array.
+This is called unstable counting sort simply because those key might contain other essential data other than integer
+values like name of the person.
+
+We create slight modification in our algorithm so that order of the keys having same values remain unchanged
+after sorting is completed.
+This is called stable sorting.
+
+Look at CS Dojo counting sort video for a clear-cut explanation.

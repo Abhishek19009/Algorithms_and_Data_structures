@@ -1,0 +1,37 @@
+Hashing with open addressing is another way to prevent collisions during hashing.
+Rather than using another array for storing colliding keys, hashing employs probing
+to search for empty slots in hash table and store the current key into that slot.
+This will prevent collisions if size of hash table is equal or greater than input array.
+
+Ex- Consider a hash table with 8 elements:-
+hash_table = [None]*8
+
+Initially all elements in hash table are None and as we insert the hashes, the table will get
+populated.
+
+Let say we insert(534)
+Hash function will compute the hash along with increasing probing values.
+For ex- value of probing at start will be 1
+so, hash(534,1) will be 2(say)
+Since hash table contains None element at 2 index, 534 will get stored at index 2
+
+Now let's insert another element i.e  623
+so, hash(623, 1) = 2(say)
+But we already have an element stored at index 2, hence probing counter will increase by 1.
+
+so, hash(623, 2) = 4(say)
+Since there is None element at 4 index, element will be placed at index 4.
+
+This greatly reduces collisions.
+However open addressing causes problems once we start deleting item.
+If by deleting we assign the value of None to corresponding index in hash table, this
+will create problem during searching.
+
+Refer to MIT lecture note on open addressing to get more details. ( It's actually very simple ).
+
+Another problem in open addressing is that it is sensitive to hash function.
+a bad hash function can cause clustering ( Refer to MIT lecture note ).
+
+To prevent this we employ double hashing method with hash function and number of elements in hash table (m)
+to be relatively prime.
+

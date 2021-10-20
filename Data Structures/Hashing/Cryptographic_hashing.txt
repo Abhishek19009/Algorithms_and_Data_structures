@@ -1,0 +1,17 @@
+Cryptographic hashing is special in a way that it employs a special hash function that has following the properties:-
+
+1. ONE-WAY (OW):- Very hard to reverse.
+2. Collision-resistant (CR):- Infeasible to find x', x s.t x != x' and h(x) != h(x'). This is a collision, two input values have same hash.
+
+3. Target collision-resistance (TCR):- Infeasible given x to find x' = x s.t h(x) = h(x')
+
+TCR is weaker than CR. If a hash function satisfies CR it will satisfy TCR.
+
+APPLICATIONS:-
+
+1. Password Storage
+2. File modification detector
+3. Digital signatures
+
+Again for detail go to internet or refer MIT lecture note about Cryptographic hashing.
+
